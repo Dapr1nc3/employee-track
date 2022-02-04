@@ -100,7 +100,7 @@ function addDepartment() {
             }
         }
     ]).then(userAnswer => {
-        const sql = `INSERT INTO department (name) VALUES('?')`;
+        const sql = `INSERT INTO department (name) VALUES(?)`;
         Connection.query(sql, userAnswer.addDepartment, (err, rows) => {
             if (err) throw err;
             console.log('Your department was added:)');
